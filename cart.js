@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const fetchCartItems = async () => {
     try {
         console.log("Fetching cart items..."); // Debugging log
-        const response = await fetch("http://localhost:5501/cart");
+        const response = await fetch("http://localhost:3306/cart");
         if (!response.ok) {
             throw new Error("Failed to fetch cart items");
         }
@@ -100,7 +100,7 @@ const renderCartItems = (cartItems) => {
 
 // Remove Item from Cart
 const removeFromCart = (itemId) => {
-    fetch(`http://localhost:5501/cart/${itemId}`, {
+    fetch(`http://localhost:3306/cart/${itemId}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" }
     })
@@ -127,7 +127,7 @@ const showConfirmationMessage = (message) => {
 
 // Update Cart Quantity
 const updateCartQuantity = (itemId, newQuantity) => {
-    fetch(`http://localhost:5501/cart/${itemId}`, {
+    fetch(`http://localhost:3306/cart/${itemId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ cart_quantity: newQuantity })

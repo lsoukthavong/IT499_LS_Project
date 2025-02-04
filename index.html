@@ -43,7 +43,7 @@
         // Fetch plants with opt. search query
         const fetchPlants = async (query = '') => {
             try {
-                const response = await fetch(`http://localhost:5501/plants?search=${query}`);
+                const response = await fetch(`http://localhost:3306/plants?search=${query}`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch Plants");
                 }
@@ -102,7 +102,7 @@
                 return;
             }
 
-            fetch("http://localhost:5501/cart", {
+            fetch("http://localhost:3306/cart", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ ...plant, quantity: 1 })

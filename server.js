@@ -15,7 +15,7 @@ const app = express(); // Initialize Express application
 const server = http.createServer(app); // Create HTTP server
 const wss = new WebSocket.Server({ server }); // Create WebSocket server
 
-const port = process.env.PORT || 5501;
+const port = process.env.PORT || 3306;
 
 app.use(cors());
 app.use(express.json()); // Middleware to parse JSON bodies
