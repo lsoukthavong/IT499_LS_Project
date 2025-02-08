@@ -1,0 +1,19 @@
+{
+  "name": "it499f_finalproject_lorrainesoukthavong",
+  "version": "1.0.0",
+  "description": "Lorraine Soukthavong IT499 Final Project",
+  "main": "server.mjs",
+  "scripts": {
+    "test": "node server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsoukthavong/IT499_FinalProject.git"
+  },
+  "author": "Lorraine Soukthavong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsoukthavong/IT499_FinalProject/issues"
+  },
+  "homepage": "https://github.com/lsoukthavong/IT499_FinalProject#readme"
+}
